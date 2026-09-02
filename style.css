@@ -549,42 +549,66 @@ nav a:hover::after {
 }
 
 
-.contact-grid {
+.contact-intro {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 52ch;
+  margin-bottom: 28px;
+}
+
+.contact-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
 }
 
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.contact-list {
+  max-width: 460px;
+  margin: 0 auto;
 }
 
-.contact-link {
+.contact-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   text-decoration: none;
   font-size: 14.5px;
-  padding: 10px 0;
+  padding: 16px 4px;
   border-bottom: 1px solid var(--line);
+  transition: padding-left 0.2s ease, color 0.2s ease;
 }
 
-.contact-link .k {
+.contact-row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.contact-row:hover {
+  padding-left: 10px;
+  color: var(--accent);
+}
+
+.contact-row .k {
   font-family: var(--mono);
   font-size: 11px;
   color: var(--muted);
-  width: 64px;
+  width: 60px;
   flex-shrink: 0;
 }
 
-.contact-link .v {
+.contact-row .v {
   color: var(--ink);
+  flex: 1;
+}
+
+.contact-row:hover .v {
+  color: var(--accent);
+}
+
+.contact-row .copy-btn {
+  margin-left: auto;
 }
 
 .copy-btn {
-  margin-left: auto;
   font-family: var(--mono);
   font-size: 11px;
   color: var(--accent);
@@ -597,77 +621,6 @@ nav a:hover::after {
 
 .copy-btn:hover {
   border-color: var(--accent);
-}
-
-label {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  margin: 0 0 6px 0;
-}
-
-.field {
-  margin-bottom: 16px;
-}
-
-.field-error {
-  font-size: 12px;
-  color: #b3432f;
-  margin-top: 5px;
-  min-height: 14px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 14.5px;
-  background: var(--surface);
-  color: var(--ink);
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
-  border-color: var(--accent);
-}
-
-input.invalid,
-textarea.invalid {
-  border-color: #b3432f;
-}
-
-button[type="submit"] {
-  padding: 11px 22px;
-  background: var(--ink);
-  color: var(--bg);
-  border: none;
-  border-radius: 6px;
-  font-size: 14.5px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background: var(--accent);
-}
-
-.form-status {
-  margin-top: 14px;
-  font-size: 13.5px;
-  display: none;
-}
-
-.form-status.show {
-  display: block;
-}
-
-.form-status.success {
-  color: var(--accent);
 }
 
 
@@ -706,8 +659,7 @@ footer {
     gap: 16px;
   }
   .skills-grid,
-  .project-row,
-  .contact-grid {
+  .project-row {
     grid-template-columns: 1fr;
   }
   .hero-actions {
