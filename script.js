@@ -1,4 +1,3 @@
-// ---------- Mobile nav toggle ----------
 const header = document.getElementById("site-header");
 const navToggle = document.getElementById("navToggle");
 
@@ -16,7 +15,6 @@ if (navToggle) {
   });
 }
 
-// ---------- Active section highlighting ----------
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -41,7 +39,6 @@ if ("IntersectionObserver" in window && sections.length) {
   sections.forEach((section) => observer.observe(section));
 }
 
-// ---------- Scroll progress bar ----------
 const progressBar = document.getElementById("scrollProgress");
 
 const updateProgress = () => {
@@ -54,7 +51,6 @@ const updateProgress = () => {
 window.addEventListener("scroll", updateProgress, { passive: true });
 updateProgress();
 
-// ---------- Back to top ----------
 const backToTop = document.getElementById("backToTop");
 
 if (backToTop) {
@@ -71,7 +67,6 @@ if (backToTop) {
   });
 }
 
-// ---------- Reveal sections on scroll ----------
 const revealTargets = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window && revealTargets.length) {
@@ -92,7 +87,6 @@ if ("IntersectionObserver" in window && revealTargets.length) {
   revealTargets.forEach((el) => el.classList.add("in-view"));
 }
 
-// ---------- Copy email button ----------
 document.querySelectorAll(".copy-btn").forEach((btn) => {
   btn.addEventListener("click", async (e) => {
     e.preventDefault();
@@ -111,7 +105,6 @@ document.querySelectorAll(".copy-btn").forEach((btn) => {
   });
 });
 
-// ---------- Contact form validation ----------
 const form = document.getElementById("contactForm");
 
 if (form) {

@@ -54,7 +54,6 @@ section + section {
   border-top: 1px solid var(--line);
 }
 
-/* ---------- Scroll progress + reveal ---------- */
 
 .scroll-progress {
   position: fixed;
@@ -136,7 +135,6 @@ p {
   max-width: 68ch;
 }
 
-/* ---------- Header ---------- */
 
 header {
   position: sticky;
@@ -206,7 +204,6 @@ nav a:hover::after {
   color: var(--ink);
 }
 
-/* ---------- Hero ---------- */
 
 .hero {
   padding-top: 64px;
@@ -326,7 +323,6 @@ nav a:hover::after {
   animation-delay: 2s;
 }
 
-/* ---------- About / meta row ---------- */
 
 .meta-row {
   display: flex;
@@ -349,7 +345,6 @@ nav a:hover::after {
   font-size: 14px;
 }
 
-/* ---------- Skills ---------- */
 
 .skills-grid {
   display: grid;
@@ -378,7 +373,6 @@ nav a:hover::after {
   background: var(--surface);
 }
 
-/* ---------- Experience timeline ---------- */
 
 .timeline {
   position: relative;
@@ -451,7 +445,6 @@ nav a:hover::after {
   color: var(--accent);
 }
 
-/* ---------- Projects ---------- */
 
 .projects {
   display: flex;
@@ -511,7 +504,6 @@ nav a:hover::after {
   margin-bottom: 14px;
 }
 
-/* ---------- Education ---------- */
 
 .edu-item {
   display: flex;
@@ -556,7 +548,6 @@ nav a:hover::after {
   color: var(--accent);
 }
 
-/* ---------- Contact ---------- */
 
 .contact-grid {
   display: grid;
@@ -679,7 +670,6 @@ button[type="submit"]:hover {
   color: var(--accent);
 }
 
-/* ---------- Footer ---------- */
 
 footer {
   text-align: center;
@@ -689,7 +679,6 @@ footer {
   font-family: var(--mono);
 }
 
-/* ---------- Responsive ---------- */
 
 @media (max-width: 900px) and (min-width: 701px) {
   .skills-grid {
